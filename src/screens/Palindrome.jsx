@@ -16,10 +16,10 @@ const Palindrome = () => {
             setResult( null );
             return;
         }
-
-        for ( let i = 0, j = inputValue.length; i < j; i++, j-- )
+        const lowerCaseInput = inputValue.toLowerCase();
+        for ( let i = 0, j = lowerCaseInput.length; i < j; i++, j-- )
         {
-            if ( inputValue[i] !== inputValue[j - 1] )
+            if ( lowerCaseInput[i] !== lowerCaseInput[j - 1] )
             {
                 setResult( false );
                 return;
